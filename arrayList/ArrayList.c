@@ -19,19 +19,23 @@ bool isEmpty(ArrayList* list);
 bool isFull(ArrayList* list);
 void display(ArrayList* list);
 
-void init(ArrayList* list){
+void init(ArrayList* list)
+{
     list->length = 0;
 }
 
-bool isEmpty(ArrayList* list){
+bool isEmpty(ArrayList* list)
+{
     return list->length == 0;
 }
 
-bool isFull(ArrayList* list){
+bool isFull(ArrayList* list)
+{
     return list->length == SIZE_LIST;
 }
 
-void add(ArrayList* list, int pos, int item){
+void add(ArrayList* list, int pos, int item)
+{
     //가득 차있지 않고 0번 인덱스 이상이거나 현재 값이 채워져있는 인덱스 중 하나인 경우
     if(!isFull(list) && (pos >= 0) && (pos <= list->length)){
 
@@ -48,7 +52,8 @@ void add(ArrayList* list, int pos, int item){
     }
 }
 
-element delete(ArrayList* list, int pos){
+element delete(ArrayList* list, int pos)
+{
     element item;
 
     //선택한 위치가 리스트 영역 밖이거나 현재
@@ -72,7 +77,8 @@ element delete(ArrayList* list, int pos){
     }
 }
 
-void add_first(ArrayList* list, int item){
+void add_first(ArrayList* list, int item)
+{
     if (isEmpty(list))
     {
         list->list[0] = item;
